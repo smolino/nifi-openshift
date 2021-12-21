@@ -58,7 +58,7 @@ EXPOSE 8080 8443 10000
 
 WORKDIR ${NIFI_HOME}
 
-USER 0
+# USER 0
 
 # Apply configuration and start NiFi
 #
@@ -69,5 +69,5 @@ USER 0
 # Also we need to use relative path, because the exec form does not invoke a command shell,
 # thus normal shell processing does not happen:
 # https://docs.docker.com/engine/reference/builder/#exec-form-entrypoint-example
-RUN chmod -R +x ../scripts/
+# RUN chmod -R +x ../scripts/
 # ENTRYPOINT ["../scripts/start.sh"]
