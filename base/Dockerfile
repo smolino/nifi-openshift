@@ -58,7 +58,7 @@ EXPOSE 8080 8443 10000
 
 WORKDIR ${NIFI_HOME}
 
-USER 1001
+USER 0
 
 # Apply configuration and start NiFi
 #
