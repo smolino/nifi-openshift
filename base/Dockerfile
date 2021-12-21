@@ -58,7 +58,7 @@ EXPOSE 8080 8443 10000
 
 WORKDIR ${NIFI_HOME}
 
-USER 0
+USER 1001
 
 # Apply configuration and start NiFi
 #
@@ -70,4 +70,4 @@ USER 0
 # thus normal shell processing does not happen:
 # https://docs.docker.com/engine/reference/builder/#exec-form-entrypoint-example
 RUN chmod -R +x ../scripts/
-ENTRYPOINT ["../scripts/start.sh"]
+# ENTRYPOINT ["../scripts/start.sh"]
